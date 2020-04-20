@@ -6,23 +6,23 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: ideal # ex. I m Chuan
-name: ideal-hp # ex. DONGChuan
-email: yezhixinghai@gmail.com
-location: chengdu/china # ex. Nice, France
-company: jumei
-company_url: my_company_website
-github_url: https://github.com/harbby # ex. https://github.com/DONGChuan
-github_username: harbby # ex. DONGChuan
-description: this is sylph web page
+title: Eklow Labs # ex. I m Chuan
+name: Eklow Labs # ex. DONGChuan
+email: eklowlabs@outlook.com
+location: Silicon Valley# ex. Nice, France
+company: Eklow Labs
+company_url: https://github.com/eklowlabs
+github_url: https://github.com/eklowlabs # ex. https://github.com/DONGChuan
+github_username: eklowlabs # ex. DONGChuan
+description: Eklow Labs | Make the world a better place by building a perfect system for code reuse and extension
 favicon: favicon.png # Image must be in assets/images
-repository: harbby/harbby.github.io # ex. DONGChuan/DONGChuan.github.io
+repository: eklowlabs/eklowlabs.github.io # ex. DONGChuan/DONGChuan.github.io
 include: [".m2"]
 
 # The base hostname & protocol for your site
 # For local test, please use http://localhost:4000
 # For production, use your github page url. ex. http://dongchuan.github.io
-url: http://harbby.github.io
+url: http://eklowlabs.github.io/
 
 ## Gem
 gems:

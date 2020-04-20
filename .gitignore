@@ -84,7 +84,7 @@ dist
 
 # Gatsby files
 .cache/
-# Comment in the public line in if your project uses Gatsby and *not* Next.js
+# Comment in the public line in if your open_flow uses Gatsby and *not* Next.js
 # https://nextjs.org/blog/next-9-1#public-directory-support
 # public
 
@@ -104,7 +104,7 @@ dist
 .tern-port
 .idea/.gitignore
 
-# IntelliJ project files
+# IntelliJ open_flow files
 .idea
 *.iml
 out
