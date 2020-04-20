@@ -15,7 +15,7 @@ company_url: https://github.com/eklowlabs
 github_url: https://github.com/eklowlabs
 github_username: eklowlabs
 description: Eklow Labs | Make The World a Better Place By Building a Perfect System For Code Reuse And Extension
-favicon: assets/images/geekparkhub.png
+favicon: geekparkhub.png
 organization_sign: resource/group_sign/eklowlabs_organization_sign_(white).svg
 repository: eklowlabs/eklowlabs.github.io
 include: [".m2"]
