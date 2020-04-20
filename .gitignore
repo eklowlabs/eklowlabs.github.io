@@ -103,3 +103,14 @@ dist
 # TernJS port file
 .tern-port
 .idea/.gitignore
+
+# IntelliJ project files
+.idea
+*.iml
+out
+.metals
+.metals/metals.lock.db
+*.metals/*
+.metals/*
+*.metals/
+gen
