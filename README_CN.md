@@ -18,7 +18,7 @@
 ------------
 
 <div align="center">
-  <img src="resource/group_sign/eklowlabs_organization_sign.svg" alt="eklowlabs_organization_sign" title="eklowlabs_organization_sign" style="width:1280px;height:450px">
+  <img src=".github/resource/group_sign/eklowlabs_organization_sign.svg" alt="eklowlabs_organization_sign" title="eklowlabs_organization_sign" style="width:1280px;height:450px">
 </div>
 <br>
 
@@ -97,10 +97,9 @@
     - 目前是具备相对专业的管理制度和响应机制, 并且在网络中自由运行的公益与商业组织;
     - 不定期 组织线上&线下面基/聚会/演讲/分享/玩耍;
     - 组织支持资源调配(为有价值或有意义的想法而时刻准备着);
-    - 组织支持资源调配(为有价值或有意义的想法而时刻准备着);
 
 - [ ] 未来 组织规划
-    - 制定 研发标椎/生产标椎;
+    - 制定 研发标准/生产标准;
     - 制定 未来三至五年的组织发展策略;
     - 升级 组织架构;
     - 升级 组织注册知识产权;
@@ -175,18 +174,15 @@
 #### 2.3.11 管理 职位
 
 
-
 ### 工作任务编排
 > 兴趣是你的第一任老师
+
 
 ### 对接与协作
 
 
 ### 组织工作制度
 > 怀抱自由工作制的同时也要保证任务的质量, 不要求加班;
-
-
-
 
 
 ## 常见问题
