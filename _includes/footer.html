@@ -3,8 +3,7 @@
     <div class="site-footer">
 
         <div class="copyright pull-left">
-            <!-- Please keep this line to let others know where this theme comes from. Thank you :D -->
-            Copyright © 2020  <a>Eklow Labs</a> .All rights reserved
+            © 2020 <a>Eklow Labs</a> , Inc.
         </div>
 
         <a aria-label="view source code">
@@ -12,7 +11,7 @@
         </a>
 
         <div class="pull-right">
-            <a href="javascript:window.scrollTo(0,0)" >TOP</a>
+            <a href="javascript:window.scrollTo(0,0)">TOP</a>
         </div>
 
     </div>
@@ -31,10 +30,17 @@
     <!-- Google Analytics -->
     <div style="display:none">
         <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
             ga('create', '{{ site.analytics.google.tracking_id }}', 'auto');
             ga('send', 'pageview');

@@ -18,7 +18,7 @@
 ------------
 
 <div align="center">
-  <img src=".github/resource/group_sign/eklowlabs_organization_sign.svg" alt="eklowlabs_organization_sign" title="eklowlabs_organization_sign" style="width:1280px;height:450px">
+  <img src="resource/group_sign/eklowlabs_organization_sign.svg" alt="eklowlabs_organization_sign" title="eklowlabs_organization_sign" style="width:1280px;height:450px">
 </div>
 <br>
 
