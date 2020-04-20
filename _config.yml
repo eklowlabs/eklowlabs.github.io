@@ -7,9 +7,9 @@
 
 # Site settings
 title: Eklow Labs # ex. I m Chuan
-name: Eklow Labs # ex. DONGChuan
+name: Eklow Labs  # ex. DONGChuan
 email: eklowlabs@outlook.com
-location: Silicon Valley# ex. Nice, France
+location: Silicon Valley # ex. Nice, France
 company: Eklow Labs
 company_url: https://github.com/eklowlabs
 github_url: https://github.com/eklowlabs # ex. https://github.com/DONGChuan
