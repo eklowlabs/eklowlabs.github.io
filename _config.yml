@@ -23,7 +23,7 @@ include: [".m2"]
 # The base hostname & protocol for your site
 # For local test, please use http://localhost:4000
 # For production, use your github page url. ex. http://dongchuan.github.io
-url: http://eklowlabs.github.io/
+url: http://eklowlabs.github.io
 
 ## Gem
 gems:
