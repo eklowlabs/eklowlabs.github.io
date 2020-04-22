@@ -58,14 +58,14 @@
             <p><strong>DataFlow-X是用于实时流计算的平台,核心是通过工作流描述构建分布式流计算应用程序.</strong>, DFX是一套完整的解决方案, 主要包括: </p>
             <ul>
                 <li>开发工具: <code>webUI</code>, 定义streamSql或streamETL任务</li>
-                <li>运行时: 基于<code>Apache Spark2.x</code>及<code>Apache Flink1.5+</code>, 依赖<code>Apache Hadoop</code>和<code>Yarn</code></li>
-                <li>Pipline插件扩展: <code>java8</code>, 按需实现<code>Source</code>,<code>Transform</code>,<code>Sink</code></li>
-                <li>基础运维: 在<code>DFX webUI</code>完成任务创建后一键部署上线, 无需人工部署, 整个分布式程序由DFX进行管理</li>
-                <li>运行分析: 在<code>DFX webUI</code>上面即可看到任务运行情况, 不再需要打隧道查看Yarn任务</li>
+                <li>运行时: 基于 <code>Apache Spark2.x</code> 及 <code>Apache Flink1.5+</code>, 依赖 <code>Apache Hadoop</code> 和 <code>Yarn</code></li>
+                <li>Pipline插件扩展: <code>java8</code>, 按需实现 <code>Source</code> => <code>Transform</code> => <code>Sink</code></li>
+                <li>基础运维: 在 <code>DFX webUI</code> 完成任务创建后一键部署上线, 无需人工部署, 整个分布式程序由DFX进行管理</li>
+                <li>运行分析: 在 <code>DFX webUI</code> 上面即可看到任务运行情况, 不再需要打隧道查看Yarn任务</li>
             </ul>
             <h2 id="设计原则"><a class="markdown-anchor" href="#设计原则">#</a> 设计原则</h2>
             <ul>
-                <li>利用插件系统分离<strong>配置与实现</strong></li>
+                <li>利用插件系统分离 <strong>配置与实现</strong></li>
                 <li><strong>约定优于配置</strong>, 按照统一的约定进行应用开发, 从开发工具到目录结构.</li>
             </ul>
             <h2 id="特性"><a class="markdown-anchor" href="#特性">#</a> 特性</h2>
@@ -76,7 +76,7 @@
                 <li>简单运维: 日志监控</li>
             </ul>
             <h2 id="什么样的场景适合用DFX"><a class="markdown-anchor" href="#什么样的场景适合用DFX">#</a> 什么样的场景适合用DFX</h2>
-            <p>目前DFX定位主要是<code>实时ETL数据处理能力</code>及<code>实时流计算</code>, 基于这两大能力, DFX有自身的特定应用场景, 主要如下:</p>
+            <p>目前DFX定位主要是 <code>实时ETL数据处理能力</code> 及 <code>实时流计算</code>, 基于这两大能力, DFX有自身的特定应用场景, 主要如下:</p>
             <ul>
                 <li>快速实验流计算</li>
                 <li>管理流计算任务</li>
