@@ -27,7 +27,8 @@
     background-color: rgb(0,115,255);
     background-repeat: initial;
     background-attachment: scroll;
-    background-image: url(/assets/images/organization_header_banner.png);
+    /*background-image: url("/assets/images/organization_header_banner_(black).png");*/
+    background-image: url("/assets/images/organization_header_banner_(white).png");
 }
 
 .site-header.site-header-nav-scrolled a {
