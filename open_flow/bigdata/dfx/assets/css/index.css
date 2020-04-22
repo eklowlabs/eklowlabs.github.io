@@ -1320,32 +1320,32 @@ aside li {
   margin-right: 10px;
 }
 .btn-primary {
-  background: #22ab28;
-  border-color: #209425;
+  background: rgb(0, 67, 255);
+  border-color: rgb(0, 67, 255);
 }
 .btn-primary:hover {
   color: #fff;
-  background: #42bd48;
-  border-color: #0e5f12;
+  background: rgb(0,115,255);
+  border-color: rgb(0,115,255);
   transition: all 0.3s;
 }
 .btn-download {
-  border: 1px solid #22ab28;
+  border: 1px solid rgb(0, 67, 255);
   border-radius: 100px;
-  color: #22ab28;
+  color: rgb(0, 67, 255);
 }
 .btn-download:hover {
-  background: #22ab28;
+  background: rgb(0,115,255);
   color: #fff;
   transition: all 0.6s;
 }
 .btn-secondary {
-  border: 1px solid #22ab28;
+  border: 1px solid rgb(0, 67, 255);
   border-radius: 100px;
-  color: #22ab28;
+  color: rgb(0,115,255);
 }
 .btn-secondary:hover {
-  background: #22ab28;
+  background: rgb(0,115,255);
   color: #fff;
   transition: all 0.6s;
 }
