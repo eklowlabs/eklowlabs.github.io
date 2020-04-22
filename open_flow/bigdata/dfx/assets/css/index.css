@@ -1076,7 +1076,7 @@ body {
   font-family: 'Helvetica Neue', 'Helvetica', tahoma, 'Hiragino Sans GB', 'PingFang SC', 'STHeitiSC-Light', 'Microsoft YaHei', Arial, sans-serif;
 }
 body a:hover {
-  color: #148a1a;
+  color: rgb(0,115,255);
 }
 h1,
 h2,
@@ -1225,11 +1225,11 @@ p {
   font-size: 30px;
 }
 .nav-logo img {
-  width: 44px;
-  margin-top: -10px;
+  width: 60px;
+  margin-top: -17px;
 }
 .nav-logo span {
-  transform: translate(4px, -13px);
+  transform: translate(7px, -19px);
   display: inline-block;
   color: #121512;
   font-size: 28px;
