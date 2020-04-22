@@ -521,7 +521,7 @@ textarea {
   line-height: inherit;
 }
 .markdown-body a {
-  color: #22ab28;
+  color: rgb(0, 67, 255);
   text-decoration: none;
 }
 .markdown-body a:hover,
@@ -1115,6 +1115,7 @@ p {
   width: 100%;
   position: fixed;
   top: 0;
+  border-top: 3px solid rgb(0,115,255);
 }
 .nav header {
   /*shift way to clear float because of the overflow hidden will hide the algolia*/
@@ -1159,16 +1160,16 @@ p {
 }
 .nav ul.nav-item a {
   display: inline-block;
-  color: #3C3C3C;
+  color: #757575;
   letter-spacing: 0.5px;
   font-weight: 500;
 }
 .nav ul.nav-item a:hover {
-  color: #22ab28;
+  color: rgb(0, 67, 255);
   transition: 0.6s all;
 }
 .nav ul.nav-item a.cur {
-  color: #22ab28;
+  color: rgb(0, 67, 255);
 }
 .nav iframe {
   vertical-align: -5px;
@@ -1233,6 +1234,7 @@ p {
   display: inline-block;
   color: #121512;
   font-size: 28px;
+  font-weight: bold;
 }
 aside {
   width: 220px;
@@ -1262,11 +1264,11 @@ aside ul li a {
   line-height: 30px;
 }
 aside ul li a:hover {
-  color: #22ab28;
+  color: rgb(0, 67, 255);
   transition: 0.3s color;
 }
 aside ul li a.cur {
-  color: #22ab28;
+  color: rgb(0, 67, 255);
 }
 aside li {
   list-style-type: none;
