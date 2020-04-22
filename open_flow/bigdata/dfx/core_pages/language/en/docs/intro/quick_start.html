@@ -65,7 +65,7 @@
                     example, calculate the PV per minute; update the UV of the last minute every 5 seconds</p>
             </blockquote>
             <h3 id="Examples-1"><a class="markdown-anchor" href="#Examples-1">#</a> Examples-1</h3>
-            <p>The following demo example will convert kafka topic <code>TP_A_1, TP_A_2</code>The data is written to the
+            <p>The following demo example will convert kafka topic <code>TP_A_1, TP_A_2</code> The data is written to the
                 mysql data table in real time <code>mysql_table_sink</code> in</p>
             <p><strong>Note: data table in mysql <code>mysql_table_sink</code> It needs to be created in advance, and
                 the field type should be compatible with the actual</strong>
@@ -101,10 +101,10 @@
                                         class="line">    a2 <span class="built_in">varchar</span>,</span><br><span
                                         class="line">    event_time <span class="built_in">bigint</span></span><br><span
                                         class="line">) <span class="keyword">with</span> (</span><br><span class="line">    <span
-                                        class="keyword">type</span> = <span class="string">'mysql'</span>,   <span
+                                        class="keyword">type</span> = <span class="string">'mysql'</span>, <span
                                         class="comment">-- com.eklowlabs.dfx.plugins.mysql.MysqlSink.java</span></span><br><span
                                         class="line">    userName = <span
-                                        class="string">'username'</span>,</span><br><span
+                                        class="string">'sys'</span>,</span><br><span
                                         class="line">    <span class="keyword">password</span> = <span class="string">'0000'</span>,</span><br><span
                                         class="line">    <span class="keyword">url</span> = <span class="string">'jdbc:mysql://localhost:3306/pop?characterEncoding=utf-8&amp;useSSL=false'</span>,</span><br><span
                                         class="line">    <span class="keyword">query</span> = <span class="string">'insert into mysql_table_sink values($&#123;0&#125;,$&#123;1&#125;,$&#123;2&#125;)'</span></span><br><span
@@ -152,10 +152,10 @@
                                         class="line">    uv <span class="built_in">bigint</span>,</span><br><span
                                         class="line">    cnt_time <span class="built_in">date</span></span><br><span
                                         class="line">) <span class="keyword">with</span> (</span><br><span class="line">    <span
-                                        class="keyword">type</span> = <span class="string">'mysql'</span>,   <span
+                                        class="keyword">type</span> = <span class="string">'mysql'</span>, <span
                                         class="comment">-- com.eklowlabs.dfx.plugins.mysql.MysqlSink.java</span></span><br><span
-                                        class="line">    userName = <span class="string">'demo'</span>,</span><br><span
-                                        class="line">    <span class="keyword">password</span> = <span class="string">'demo'</span>,</span><br><span
+                                        class="line">    userName = <span class="string">'sys'</span>,</span><br><span
+                                        class="line">    <span class="keyword">password</span> = <span class="string">'0000'</span>,</span><br><span
                                         class="line">    <span class="keyword">url</span> = <span class="string">'jdbc:mysql://localhost:3306/pop?characterEncoding=utf-8&amp;useSSL=false'</span>,</span><br><span
                                         class="line">    <span class="keyword">query</span> = <span class="string">'insert into mysql_uv_table_sink values($&#123;0&#125;,$&#123;1&#125;,$&#123;2&#125;)'</span></span><br><span
                                         class="line">);</span><br><span class="line"></span><br><span class="line">with tb13 as (<span
