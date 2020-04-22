@@ -33,16 +33,14 @@
                     <li><a href="/open_flow/bigdata/dfx/core_pages/language/en">英文</a></li>
                 </ul>
             </li>
-
             <li>
                 <iframe src="https://ghbtns.com/github-btn.html?user=eklowlabs&repo=DataFlow-X&type=star&count=true"
                         frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
                 <iframe src="https://ghbtns.com/github-btn.html?user=eklowlabs&repo=DataFlow-X&type=fork&count=true"
                         frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
             </li>
-
-
         </ul>
+
         <a id="mobileTrigger" href="#" class="mobile-trigger">
             <ul>
                 <li></li>
@@ -56,40 +54,37 @@
 <div id="container">
     <div class="page-main">
         <article class="markdown-body">
-            <h1>SYLPH 是什么?</h1>
-            <p><strong>SYLPH 是一个用于实时流计算的平台,核心是通过工作流描述构建分布式流计算应用程序。</strong>,SYLPH是一套完整的解决方案，主要包括：</p>
+            <h1>DataFlow-X 是什么?</h1>
+            <p><strong>DataFlow-X是用于实时流计算的平台,核心是通过工作流描述构建分布式流计算应用程序.</strong>, DFX是一套完整的解决方案, 主要包括: </p>
             <ul>
-                <li>开发工具：<code>webUI</code>, 定义streamSql或streamETl任务</li>
-                <li>运行时：基于<code>spark2.x</code>及<code>flink1.5+</code> , 依赖<code>hdfs</code>和<code>yarn</code></li>
-                <li>pipline插件扩展: <code>java8</code>, 按需实现<code>source</code>,<code>transform</code>,<code>sink</code>
-                </li>
-                <li>基础运维：在<code>webUI</code>完成任务创建后一键部署上线,无需人工部署,整个分布式程序由sylph进行管理</li>
-                <li>运行分析: 在sylph<code>webUI</code> 上面即可看到任务运行情况,不再需要打隧道查看yarn任务</li>
+                <li>开发工具: <code>webUI</code>, 定义streamSql或streamETL任务</li>
+                <li>运行时: 基于<code>Apache Spark2.x</code>及<code>Apache Flink1.5+</code>, 依赖<code>Apache Hadoop</code>和<code>Yarn</code></li>
+                <li>Pipline插件扩展: <code>java8</code>, 按需实现<code>Source</code>,<code>Transform</code>,<code>Sink</code></li>
+                <li>基础运维: 在<code>DFX webUI</code>完成任务创建后一键部署上线, 无需人工部署, 整个分布式程序由DFX进行管理</li>
+                <li>运行分析: 在<code>DFX webUI</code>上面即可看到任务运行情况, 不再需要打隧道查看Yarn任务</li>
             </ul>
             <h2 id="设计原则"><a class="markdown-anchor" href="#设计原则">#</a> 设计原则</h2>
             <ul>
                 <li>利用插件系统分离<strong>配置与实现</strong></li>
-                <li>奉行『<strong>约定优于配置</strong>』，按照[一套统一的约定]进行应用开发，从开发工具，到目录结构。</li>
+                <li><strong>约定优于配置</strong>, 按照统一的约定进行应用开发, 从开发工具到目录结构.</li>
             </ul>
             <h2 id="特性"><a class="markdown-anchor" href="#特性">#</a> 特性</h2>
             <ul>
-                <li>快速完成实时计算任务：StreamSql</li>
-                <li>灵活性: 可以简单自主定制 pipeline节点插件</li>
-                <li>便捷的部署：自动重启，一键上线到yarn</li>
-                <li>简单的运维：日志 监控</li>
+                <li>快速完成实时计算任务: StreamSql</li>
+                <li>灵活性: 可简单自定义 pipeline节点插件</li>
+                <li>便捷部署: 自动重启机制, 一键上线至Yarn</li>
+                <li>简单运维: 日志监控</li>
             </ul>
-            <h2 id="什么样的场景适合用sylph"><a class="markdown-anchor" href="#什么样的场景适合用sylph">#</a> 什么样的场景适合用SYLPH</h2>
-            <p>目前SYLPH的定位主要是<code>实时etl数据处理能力</code>及<code>实时流计算</code>。基于这两大能力，SYLPH有自己的特定应用场景。主要如下：</p>
+            <h2 id="什么样的场景适合用DFX"><a class="markdown-anchor" href="#什么样的场景适合用DFX">#</a> 什么样的场景适合用DFX</h2>
+            <p>目前DFX定位主要是<code>实时ETL数据处理能力</code>及<code>实时流计算</code>, 基于这两大能力, DFX有自身的特定应用场景, 主要如下:</p>
             <ul>
                 <li>快速实验流计算</li>
                 <li>管理流计算任务</li>
             </ul>
-
         </article>
 
         <aside id="mobileAside" class="toc">
             <div class="mobile-menu">
-
                 <ul>
                     <li><a href="/open_flow/bigdata/dfx/core_pages/language/en" alt="英文" class="">英文</a> | <a
                             href="/open_flow/bigdata/dfx/core_pages/language/zh-cn" alt="中文" class="">中文</a></li>
@@ -105,50 +100,42 @@
                 <dt>新手指南</dt>
                 <dd>
                     <ul>
-                        <li><a href="/open_flow/bigdata/sylphta/sylph/zh-cn/docs/intro/index.html"
-                               class="cur">STLPH是什么</a></li>
-                        <li><a href="/open_flow/bigdata/sylphta/sylph/zh-cn/docs/intro/quickstart.html"
-                               class="">快速入门</a></li>
-                        <li><a href="/open_flow/bigdata/sylphta/sylph/zh-cn/docs/intro/etl.html" class="">ETL任务.</a>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/intro/index.html" class="cur">DFX是什么</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/intro/quickstart.html" class="">快速入门</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/intro/etl.html" class="">ETL任务</a>
                         </li>
-                        <li><a href="/open_flow/bigdata/sylphta/sylph/zh-cn/docs/intro/batch-join.html"
-                               class="">维表join</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/intro/batch-join.html" class="">维表Join</a></li>
                     </ul>
                 </dd>
                 <dt>基础功能</dt>
                 <dd>
                     <ul>
-                        <li><a href="/open_flow/bigdata/sylphta/sylph/zh-cn/docs/basics/setup.html" class="">安装</a></li>
-                        <li><a href="/open_flow/bigdata/sylphta/sylph/zh-cn/docs/basics/structure.html"
-                               class="">目录结构</a></li>
-                        <li><a href="/open_flow/bigdata/sylphta/sylph/zh-cn/docs/basics/deployment.html"
-                               class="">应用部署</a></li>
-                        <li><a href="/open_flow/bigdata/sylphta/sylph/zh-cn/docs/basics/online.html" class="">上线和路由</a>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/basics/setup.html" class="">安装</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/basics/structure.html" class="">目录结构</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/basics/deployment.html" class="">应用部署</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/basics/online.html" class="">上线和路由</a>
                         </li>
                     </ul>
                 </dd>
                 <dt>进阶功能</dt>
                 <dd>
                     <ul>
-                        <li><a href="/open_flow/bigdata/sylphta/sylph/zh-cn/docs/advanced/framework.html"
-                               class="">框架开发</a></li>
-                        <li><a href="/open_flow/bigdata/sylphta/sylph/zh-cn/docs/advanced/plugin_manager.html" class="">插件管理</a>
-                        </li>
-                        <li><a href="/open_flow/bigdata/sylphta/sylph/zh-cn/docs/advanced/plugin_api.html" class="">pipe插件接口定义</a>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/advanced/framework.html" class="">框架开发</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/advanced/plugin_manager.html" class="">插件管理</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/advanced/plugin_api.html" class="">pipe插件接口定义</a>
                         </li>
                     </ul>
                 </dd>
                 <dt>常见问题</dt>
                 <dd>
                     <ul>
-                        <li><a href="/open_flow/bigdata/sylphta/sylph/zh-cn/docs/faq/deploy.html" class="">部署问题</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/faq/deploy.html" class="">部署问题</a></li>
                     </ul>
                 </dd>
                 <dt>其它</dt>
                 <dd>
                     <ul>
-                        <li><a href="/open_flow/bigdata/sylphta/sylph/zh-cn/docs/basics/service.html"
-                               class="">服务</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/basics/service.html" class="">服务</a></li>
                     </ul>
                 </dd>
             </dl>

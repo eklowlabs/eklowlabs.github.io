@@ -848,7 +848,7 @@ textarea {
   margin: 0;
   font-size: 85%;
   color: #687168;
-  background-color: #def5df;
+  background-color: rgba(0, 115, 255, 0.13);
   border-radius: 3px;
 }
 .markdown-body code::before,
