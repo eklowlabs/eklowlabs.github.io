@@ -1,121 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>SYLPH - sylph流计算平台</title>
-<meta charset="utf-8">
-<meta name="description" content="">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="icon" href="/open_flow/bigdata/sylphta/sylph/images/favicon.png" type="image/x-icon">
-
-
-<link rel="stylesheet" href="/open_flow/bigdata/sylphta/sylph/css/index.css">
-
-
-
-
+    <title>DFX - Stream Computing Platform</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/open_flow/bigdata/dfx/assets/images//favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/open_flow/bigdata/dfx/assets/css/index.css">
 </head>
 <body>
-  <div class="nav" >
-  <header>
-    <a href="/open_flow/bigdata/sylphta/sylph/en" class="nav-logo" alt="nodeui">
-    <img src="/open_flow/bigdata/sylphta/sylph/images/logo.png" width="89"><span>SYLPH</span>
-    </a>
-    <ul class="nav-item">
-      <li>
-        <form id="search-form">
-          <input type="text" id="search-query" class="search-query st-default-search-input">
-        </form>
-      </li>
-      <li><a href="/open_flow/bigdata/sylphta/sylph/en/docs/intro" alt="Document" class="">Document</a></li><li><a href="https://github.com/harbby/sylph/releases" alt="release" class="">release</a></li><li><a href="/open_flow/bigdata/sylphta/sylph/en/page/user.html" alt="Case" class="">Case</a></li>
+<div class="nav">
+    <header>
+        <a class="nav-logo" alt="nodeui">
+            <img src="/open_flow/bigdata/dfx/assets/images/dfx.svg"><span>DFX</span>
+        </a>
+        <ul class="nav-item">
+            <li>
+                <form id="search-form">
+                    <input type="text" id="search-query" class="search-query st-default-search-input">
+                </form>
+            </li>
+            <li><a href="open_flow/bigdata/dfx/core_pages/language/en/docs/intro" alt="Document" class="">Document</a>
+            </li>
+            <li><a href="https://github.com/eklowlabs/DataFlow-X/releases" alt="Release" class="">Release</a></li>
+            <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/page/user.html" alt="Case" class="">Case</a></li>
 
-      <li class="translations">
-        <a class="nav-link">语言</a>
-        <span class="arrow"></span>
-        <ul class="dropdown-content">
-          <li><a href="/open_flow/bigdata/sylphta/sylph/zh-cn">中文</a></li>
-          <li><a href="/open_flow/bigdata/sylphta/sylph/en">English</a></li>
+            <li class="translations">
+                <a class="nav-link">Release</a>
+                <span class="arrow"></span>
+                <ul class="dropdown-content">
+                    <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn">Chinese</a></li>
+                    <li><a href="/open_flow/bigdata/dfx/core_pages/language/en">English</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <iframe src="https://ghbtns.com/github-btn.html?user=eklowlabs&repo=DataFlow-X&type=star&count=true"
+                        frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
+                <iframe src="https://ghbtns.com/github-btn.html?user=eklowlabs&repo=DataFlow-X&type=fork&count=true"
+                        frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
+            </li>
+
         </ul>
-      </li>
-
-      <!-- github star星数 -->
-      <li>
-          <iframe src="https://ghbtns.com/github-btn.html?user=harbby&repo=sylph&type=star&count=true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
-          <iframe src="https://ghbtns.com/github-btn.html?user=harbby&repo=sylph&type=fork&count=true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
-      </li>
-
-      
-
-    </ul>
-    <a id="mobileTrigger" href="#" class="mobile-trigger">
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </a>
-  </header>
+        <a id="mobileTrigger" href="#" class="mobile-trigger">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </a>
+    </header>
 </div>
 
-  <div id="container">
+<div id="container">
     <div class="index">
-  <div class="banner block index-bg-light">
-    <div class="banner-logo">
-      <!-- <img src="https://zos.alipayobjects.com/rmsportal/JFKAMfmPehWfhBPdCjrw.svg"/> -->
+        <div class="banner block index-bg-light">
+            <div class="banner-logo">
+                <!-- <img src="/open_flow/bigdata/dfx/assets/images/dfx.svg"/> -->
+            </div>
+            <div class="banner-info">
+              <h1 class="fadeInUp animated">
+                <p style="font-weight:bold; font-size:51px;">DataFlow-X (DFX)</p><br>
+                <p style="font-weight:bold; font-size:48px;">Stream Computing FrameWork</p>
+              </h1><br>
+                <p style="font-size: 22px;" class="fadeInUp animated">Build your private stream computing experiment
+                    platform</p>
+              <p class="banner-button fadeInUp animated">
+                <a class="btn btn-primary"
+                   href="/open_flow/bigdata/dfx/core_pages/language/en/docs/intro/quick_start.html">Get Start</a>
+                <a class="btn btn-secondary" href="https://github.com/eklowlabs/DataFlow-X">Source Code</a>
+                <a class="btn btn-download" href="https://github.com/eklowlabs/DataFlow-X/releases">Download</a>
+              </p>
+            </div>
+        </div>
     </div>
-    <div class="banner-info">
-      <h1 class="fadeInUp animated"><p style="font-weight:bold;font-size:48px;">STREAM FrameWork</p></h1>
-      <p style="font-size: 22px;" class="fadeInUp animated">Build your private stream computing experiment platform</p>
-      <p class="banner-button fadeInUp animated">
-        <a class="btn btn-primary" href="/open_flow/bigdata/sylphta/sylph/en/docs/intro/quickstart.html">getstart</a>
-        <a class="btn btn-secondary" href="https://github.com/harbby/sylph">code</a>
-        <a class="btn btn-download" href="https://github.com/harbby/sylph/releases">download</a>
-      </p>
-    </div>
-  </div>
-</div>
 
-<div class="index-aside">
-<aside id="mobileAside" class="toc">
-  <div class="mobile-menu">
-    
-    <ul><li><a href="/open_flow/bigdata/sylphta/sylph/en/docs/intro" alt="Document" class="">Document</a></li><li><a href="https://github.com/harbby/sylph/releases" alt="release" class="">release</a></li><li><a href="/open_flow/bigdata/sylphta/sylph/en/page/user.html" alt="Case" class="">Case</a></li></ul>
-  </div>
-  <dl></dl>
-</aside>
-<script src="/open_flow/bigdata/sylphta/sylph/js/mobile-aside.js"></script>
-
-</div>
-<div class="footer">
-  <footer>
-    <ul>
-    <!-- <li>Desigin by: <strong>harbby</strong></li> -->
-    <li>version <strong>= 0.1.0-SNAPSHOT</strong></li>
-    </ul>
-
-    <div class="license">
-        © 2018 <strong><a href="https://github.com/harbby">https://github.com/harbby</a></strong>
-    <!-- Released under the MIT License <a href="https://github.com/wmfe"><img src="/images/github.svg"/></a> -->
+    <div class="index-aside">
+        <aside id="mobileAside" class="toc">
+            <div class="mobile-menu">
+              <ul>
+                <li><a href="/open_flow/bigdata/dfx/core_pages/language/en" alt="English" class="">English</a> | <a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn" alt="Chinese" class="">Chinese</a></li>
+                <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/intro" alt="Document" class="">Document</a></li>
+                <li><a href="https://github.com/eklowlabs/DataFlow-X/releases" alt="Release" class="">Release</a>
+                </li>
+                <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/page/user.html" alt="Case"
+                       class="">Case</a></li>
+              </ul>
+            </div>
+            <dl></dl>
+        </aside>
+        <script src="/open_flow/bigdata/dfx/assets/js/mobile-aside.js"></script>
 
     </div>
-  </footer>
+    <div class="footer">
+        <footer>
+            <ul>
+              <li>Latest Release Version <strong>= 🐣 0.2.5-SNAPSHOT 🐣</strong></li>
+            </ul>
+            <div class="license">
+              <script type="text/javascript">
+                /* <![CDATA[ */
+                copyright = new Date();
+                update = copyright.getFullYear();
+                document.write("&copy; 2019-" + update + "<strong><a href=\"https://github.com/eklowlabs\"> Eklow Labs</a>, Inc.</strong>");
+                /* ]]> */
+              </script>
+            </div>
+        </footer>
+    </div>
 </div>
-
-
-
-
-
-
-
-  </div>
 </body>
-<!-- <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
-<script> 
-docsearch({
-  apiKey: '1561de31a86f79507ea00cdb54ce647c',
-  indexName: 'eggjs',
-  inputSelector: '#search-query',
-  // debug: true // Set debug to true if you want to inspect the dropdown
-});
-</script> -->
 </html>
