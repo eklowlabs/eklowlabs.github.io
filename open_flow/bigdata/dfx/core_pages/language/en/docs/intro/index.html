@@ -35,16 +35,14 @@
                     <li><a href="/open_flow/bigdata/dfx/core_pages/language/en">English</a></li>
                 </ul>
             </li>
-
             <li>
                 <iframe src="https://ghbtns.com/github-btn.html?user=eklowlabs&repo=DataFlow-X&type=star&count=true"
                         frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
                 <iframe src="https://ghbtns.com/github-btn.html?user=eklowlabs&repo=DataFlow-X&type=fork&count=true"
                         frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
             </li>
-
-
         </ul>
+
         <a id="mobileTrigger" href="#" class="mobile-trigger">
             <ul>
                 <li></li>
@@ -58,35 +56,33 @@
 <div id="container">
     <div class="page-main">
         <article class="markdown-body">
-            <h1>SYLPH 是什么?</h1>
-            <p><strong>SYLPH 是一个用于实时流计算的平台,核心是通过工作流描述构建分布式流计算应用程序。</strong>,SYLPH是一套完整的解决方案，主要包括：</p>
+            <h1>What is DataFlow-X?</h1>
+            <p><strong>DataFlow-X is a platform for real-time flow computing, the core is to build distributed flow computing applications through workflow description.</strong>, DFX is a complete solution, mainly including: </p>
             <ul>
-                <li>开发工具：<code>webUI</code>, 定义streamSql或streamETl任务</li>
-                <li>运行时：基于<code>spark2.x</code>及<code>flink1.5+</code> , 依赖<code>hdfs</code>和<code>yarn</code></li>
-                <li>pipline插件扩展: <code>java8</code>, 按需实现<code>source</code>,<code>transform</code>,<code>sink</code>
-                </li>
-                <li>基础运维：在<code>webUI</code>完成任务创建后一键部署上线,无需人工部署,整个分布式程序由sylph进行管理</li>
-                <li>运行分析: 在sylph<code>webUI</code> 上面即可看到任务运行情况,不再需要打隧道查看yarn任务</li>
+                <li>Development Tools: <code>webUI</code>, Define stream Sql or stream ETL task</li>
+                <li>RunTime: based on<code>Apache Spark 2.x</code>and<code>Apache Flink 1.5+</code>, rely<code>Apache Hadoop</code>and<code>Yarn</code></li>
+                <li>Pipline Plugin Extension: <code>java8</code>, On demand<code>Source</code>,<code>Transform</code>,<code>Sink</code></li>
+                <li>Basic Operation And Maintenance: in<code>DFX webUI</code>One-click deployment and online after completing task creation, No manual deployment, The entire distributed program is managed by DFX</li>
+                <li>Run Analysis: You can see the task running status on the <code>DFX webUI</code>, no longer need to tunnel to view Yarn tasks</li>
             </ul>
-            <h2 id="设计原则"><a class="markdown-anchor" href="#设计原则">#</a> 设计原则</h2>
+            <h2 id="Design Principles"><a class="markdown-anchor" href="#Design Principles">#</a> Design Principles</h2>
             <ul>
-                <li>利用插件系统分离<strong>配置与实现</strong></li>
-                <li>奉行『<strong>约定优于配置</strong>』，按照[一套统一的约定]进行应用开发，从开发工具，到目录结构。</li>
+                <li>Separation using plug-in system<strong>Configuration and implementation</strong></li>
+                <li><strong>Convention is better than configuration</strong>, according to a unified convention for application development, from development tools to directory structure.</li>
             </ul>
-            <h2 id="特性"><a class="markdown-anchor" href="#特性">#</a> 特性</h2>
+            <h2 id="Characteristic"><a class="markdown-anchor" href="#Characteristic">#</a> Characteristic</h2>
             <ul>
-                <li>快速完成实时计算任务：StreamSql</li>
-                <li>灵活性: 可以简单自主定制 pipeline节点插件</li>
-                <li>便捷的部署：自动重启，一键上线到yarn</li>
-                <li>简单的运维：日志 监控</li>
+                <li>Quickly complete real-time computing tasks: Stream Sql</li>
+                <li>Flexibility: Easy to customize pipeline node plugin</li>
+                <li>Easy Deployment: Automatic restart mechanism, one-click online to Yarn</li>
+                <li>Simple Operation And Maintenance: Log monitoring</li>
             </ul>
-            <h2 id="什么样的场景适合用sylph"><a class="markdown-anchor" href="#什么样的场景适合用sylph">#</a> 什么样的场景适合用SYLPH</h2>
-            <p>目前SYLPH的定位主要是<code>实时etl数据处理能力</code>及<code>实时流计算</code>。基于这两大能力，SYLPH有自己的特定应用场景。主要如下：</p>
+            <h2 id="What kind of scene is suitable for DFX"><a class="markdown-anchor" href="#What kind of scene is suitable for DFX">#</a> What kind of scene is suitable for DFX</h2>
+            <p>The current DFX positioning is mainly<code>Real-time ETL data processing capability</code>and<code>Real-time streaming computing</code>, Based on these two capabilities, DFX has its own specific application scenarios, mainly as follows: </p>
             <ul>
-                <li>快速实验流计算</li>
-                <li>管理流计算任务</li>
+                <li>Fast experimental flow calculation</li>
+                <li>Manage stream computing tasks</li>
             </ul>
-
         </article>
 
         <aside id="mobileAside" class="toc">
@@ -104,51 +100,43 @@
                 </ul>
             </div>
             <dl>
-                <dt>guide</dt>
+                <dt>Guide</dt>
                 <dd>
                     <ul>
-                        <li><a href="/open_flow/bigdata/sylphta/sylph/en/docs/intro/index.html" class="cur">What is
-                            STLPH</a></li>
-                        <li><a href="/open_flow/bigdata/sylphta/sylph/en/docs/intro/quickstart.html" class="">Quick
-                            start</a></li>
-                        <li><a href="/open_flow/bigdata/sylphta/sylph/en/docs/intro/etl.html" class="">ETL Job</a></li>
-                        <li><a href="/open_flow/bigdata/sylphta/sylph/en/docs/intro/batch-join.html" class="">stream
-                            join batch</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/intro/index.html" class="cur">What is DFX</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/intro/quickstart.html" class="">Quick Start</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/intro/etl.html" class="">ETL Job</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/intro/batch-join.html" class="">Stream Join Batch</a></li>
                     </ul>
                 </dd>
                 <dt>Basics</dt>
                 <dd>
                     <ul>
-                        <li><a href="/open_flow/bigdata/sylphta/sylph/en/docs/basics/setup.html" class="">Setup</a></li>
-                        <li><a href="/open_flow/bigdata/sylphta/sylph/en/docs/basics/structure.html" class="">Directory
-                            Structure</a></li>
-                        <li><a href="/open_flow/bigdata/sylphta/sylph/en/docs/basics/deployment.html" class="">Application
-                            deployment</a></li>
-                        <li><a href="/open_flow/bigdata/sylphta/sylph/en/docs/basics/online.html" class="">Job
-                            Online</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/basics/setup.html" class="">Setup</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/basics/structure.html" class="">Directory Structure</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/basics/deployment.html" class="">Application Deployment</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/basics/online.html" class="">Job Online</a></li>
                     </ul>
                 </dd>
                 <dt>Advanced</dt>
                 <dd>
                     <ul>
-                        <li><a href="/open_flow/bigdata/sylphta/sylph/en/docs/advanced/framework.html" class="">Framework
-                            development</a></li>
-                        <li><a href="/open_flow/bigdata/sylphta/sylph/en/docs/advanced/plugin_manager.html" class="">PluginManager</a>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/advanced/framework.html" class="">Framework Development</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/advanced/plugin_manager.html" class="">Plugin Manager</a>
                         </li>
-                        <li><a href="/open_flow/bigdata/sylphta/sylph/en/docs/advanced/plugin_api.html" class="">connector
-                            Api</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/advanced/plugin_api.html" class="">Connector Api</a></li>
                     </ul>
                 </dd>
                 <dt>FAQ</dt>
                 <dd>
                     <ul>
-                        <li><a href="/open_flow/bigdata/sylphta/sylph/en/docs/faq/deploy.html" class="">Deploy</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/faq/deploy.html" class="">Deploy</a></li>
                     </ul>
                 </dd>
                 <dt>Other</dt>
                 <dd>
                     <ul>
-                        <li><a href="/open_flow/bigdata/sylphta/sylph/en/docs/basics/service.html" class="">Service</a>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/basics/service.html" class="">Service</a>
                         </li>
                     </ul>
                 </dd>
