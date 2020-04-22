@@ -1083,7 +1083,7 @@ body {
   background: #FFFFFF;
   font-size: 14px;
   font-family: 'Helvetica Neue', 'Helvetica', tahoma, 'Hiragino Sans GB', 'PingFang SC', 'STHeitiSC-Light', 'Microsoft YaHei', Arial, sans-serif;
-  background-image: url("/assets/images/organization_header_banner_(black).svg");
+  background-image: url("/assets/images/organization_header_banner_(black).png");
 }
 body a:hover {
   color: rgb(0,115,255);
