@@ -9,6 +9,7 @@
     <link rel="icon" href="/open_flow/bigdata/dfx/assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="/open_flow/bigdata/dfx/assets/css/index.css">
 </head>
+
 <body>
 <div class="nav">
     <header>
@@ -61,7 +62,7 @@
             <blockquote>
                 <p>StreamSql是完全通过类sql来描述整个流计算的过程, 主要需要描述: 数据源如何接入、如何计算、如何输出到外部存储; 例如计算每分钟的PV; 每5秒更新一次最近一分钟的UV</p>
             </blockquote>
-            <h3 id="Examples-1"><a class="markdown-anchor" href="#Examples-1">#</a> Examples-1</h3>
+            <h3 id="实例-1"><a class="markdown-anchor" href="#实例-1">#</a> 实例-1</h3>
             <p>下面演示例子将kafka topic <code>TP_A_1, TP_A_2</code> 的数据实时写入mysql数据表 <code>mysql_table_sink</code> 中</p>
             <p><strong>注意: mysql中数据表 <code>mysql_table_sink</code> 需要提前自行创建完成, 并且字段类型要和实际兼容</strong>
                 <figure class="highlight sql">
@@ -114,7 +115,7 @@
                     </table>
                 </figure>
             </p>
-            <h3 id="Examples-2"><a class="markdown-anchor" href="#Examples-2">#</a> Examples-2</h3>
+            <h3 id="实例-2"><a class="markdown-anchor" href="#实例-2">#</a> 实例-2</h3>
             <p>下面例子演示如何计算topic <code>TP_A_1</code> 每分钟的UV
                 <figure class="highlight sql">
                     <table>
