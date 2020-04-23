@@ -1541,7 +1541,7 @@ aside li {
 .post-titlt {
   margin-top: 56px;
   position: relative;
-  background: url("../images/banner.jpg") 0 80%;
+  background: url("../images/banner.jpg") 0 -41px;
   background-size: cover;
 }
 .docs-header {
