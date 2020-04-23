@@ -62,15 +62,68 @@
             <ul>
                 <li>JDK: 首先请确保JDK版本在1.8以上, 查看Java版本 <code>java -version</code>, 如果没有安装, 请先下载并安装jdk_1.8+</li>
                 <li>clone: DFX基于Apache Flink版本, 目前兼容 Apache Flink 1.7.2 和 Apache Flink 1.9</li>
-                <li>Flink: 请下载 Apache Flink 1.7.2 with Scala 2.11 或 Apache Flink 1.9 with Scala 2.12, 这由你clone的DFX版本决定<br>
-                    <strong>注意: Apache Flink 以及 Apache Hadoop / Apache Spark, 只需要下载包解压即可, 如果使用的是local模式, 并不需要专门搭建或者启动任何的Hadoop / Spark或Flink环境, 假如使用的是Yarn模式, 则需要Yarn集群</strong>
+                <li>Flink: 请下载 Apache Flink 1.7.2 with Scala 2.11 或 Apache Flink 1.9 with Scala 2.12,
+                    这由你clone的DFX版本决定<br>
+                    <strong>注意: Apache Flink 以及 Apache Hadoop / Apache Spark, 只需要下载包解压即可, 如果使用的是local模式,
+                        并不需要专门搭建或者启动任何的Hadoop / Spark或Flink环境, 假如使用的是Yarn模式, 则需要Yarn集群</strong>
                 </li>
                 <li>Spark: 请下载 Apache Spark 2.4.x+ with-hadoop-xxx (后面的版本由你下载的hadoop版本决定)</li>
-                <li>Hadoop: 请下载 Apache Hadoop 2.6以上版本 </li>
+                <li>Hadoop: 请下载 Apache Hadoop 2.6以上版本</li>
             </ul>
 
             <h2 id="源码编译"><a class="markdown-anchor" href="#源码编译">#</a> 源码编译</h2>
             <p>完成了准备工作, 接下来开始编译DFX</p>
+            <p>进入到clone后的DataFlow-X主目录下</p>
+            <p>注: 首次编译一般耗时较长, 如果想跳过一些java-docs代码编译, 可编辑主目录下***build.gradle***文件, 注释以下内容即可: </p>
+            <p>
+                <figure class="highlight java">
+                    <table>
+                        <tr>
+                            <td class="code">
+                                <pre>
+                                    <span class="string">
+                                    //  task javadocJar(type: Jar, dependsOn: javadoc) {
+                                    //    classifier = 'javadoc'
+                                    //    from javadoc.destinationDir
+                                    //    //javadoc.failOnError = false
+                                    //  }
+                                      artifacts {
+                                        archives sourcesJar
+                                    //    , javadocJar
+                                      }
+                                </span>
+                                </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </figure>
+            </p>
+            <p>在Mac 或 Unix 或 Linux环境下在项目根目录下请执行</p>
+            <p>
+                <figure class="highlight sql">
+                    <table>
+                        <tr>
+                            <td class="code">
+                                <pre><span class="string">./gradlew clean assemblet</span></pre>
+                            </td>
+                        </tr>
+                    </table>
+                </figure>
+            </p>
+            <p>在Windows环境下请执行</p>
+            <p>
+                <figure class="highlight sql">
+                    <table>
+                        <tr>
+                            <td class="code">
+                                <pre><span class="string">gradlew.bat clean assemble</span></pre>
+                            </td>
+                        </tr>
+                    </table>
+                </figure>
+            </p>
+            <p>耐心等待编译完成, 即可进行下一步运行</p>
+            
             <h2 id="运行应用"><a class="markdown-anchor" href="#运行应用">#</a> 运行应用</h2>
 
         </article>
