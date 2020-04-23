@@ -203,10 +203,23 @@
 
             
             <h3>IntelliJ IDEA 运行</h3>
-
-
-
-
+            <p><strong>导入项目</strong></p>
+            <p>将DataFlow-X导入 IntelliJ IDEA 中, 在进行下一步之前, 请确保一些环境信息, 如jdk和java编译器必须是版本8以上</p>
+            <p><strong>Run / Debug Configurations</strong></p>
+            <p>新建Application的RunConf, 进行配置的填写</p>
+            <p><strong>相关配置说明</strong></p>
+            <ul>
+                <li>Main Class: <code>ideal.sylph.main.DFXMaster</code></li>
+                <li>VM Options: <code>-Dconfig=etc/DataFlow-X/dfx.properties -Dlogging.config=etc/DataFlow-X/logback.xml</code></li>
+                <li>Program Arguments: 如命令行运行中修改 <code>dfx-env.sh</code>, 将Flink等的环境配置进来, 以";"分割</li>
+                <li>Working Directory: 目录到编译后的 dfx-dist/build目录下, 即clone后的dfx目录/dfx-dist/build全路径</li>
+                <li>Environment Variables: 与Program Arguments相同</li>
+                <li>Use Classpath of Module: <code>dfx-main</code></li>
+                <li>JRE: 1.8</li>
+            </ul>
+            <p><strong>运行</strong></p>
+            <p>application配置完成后即可运行</p>
+            <p>至此, 部署顺利完成, 如果你在部署或者使用过程中有任何问题, 欢迎提交<a href="https://github.com/eklowlabs/DataFlow-X/issues">issues</a>或者通过<a href="mailto:eklowlabs@outlook.com">联系我们</a>, 希望DFX可以让你进行愉快工作!</p>
         </article>
 
         <aside id="mobileAside" class="toc">
