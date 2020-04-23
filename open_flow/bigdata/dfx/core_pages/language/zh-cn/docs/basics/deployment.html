@@ -161,7 +161,7 @@
                             <td class="code">
                                 <pre>
                                     <span class="string">
-    #!/bin/bash
+  #!/bin/bash
   # set your JAVA_HOME
   #export JAVA_HOME=/opt/sys/parcels/jdk8
 
@@ -180,8 +180,26 @@
                     </table>
                 </figure>
             </p>
-
-
+            <p><strong>配置说明</strong></p>
+            <ul>
+                <li>HADOOP_CONF_DIR: Hadoop Conf全路径, 如果使用的是local模式, 只需要将解压后的hadoop/etc/hadoop路径拷贝即可, 如果使用的是Yarn模式, 则这里是Yarn集群 hadoop conf 配置文件所在目录
+                    <strong>注意: 如果因为某些原因, DFX无法部署在包含Yarn Hadoop配置的机器, 也可将hadoop集群的配置直接拷贝至DFX所在机器上, 并修改配置指向, 这种情况下请确保DFX所在机器可以成功访问您的集群</strong>
+                </li>
+                <li>FLINK_HOME: Apache Flink路径, 指向Flink根目录</li>
+                <li>SPARK_HOME: Apache Spark路径, 指向Spark根目录</li>
+            </ul>
+            <p><strong>运行</strong> 修改完配置后, 执行以下命令即可运行</p>
+            <p>
+                <figure class="highlight sql">
+                    <table>
+                        <tr>
+                            <td class="code">
+                                <pre><span class="string">./bin/launcher start</span></pre>
+                            </td>
+                        </tr>
+                    </table>
+                </figure>日志文件为: logs/INFO.log
+            </p>
 
             
             <h3>IntelliJ IDEA 运行</h3>
