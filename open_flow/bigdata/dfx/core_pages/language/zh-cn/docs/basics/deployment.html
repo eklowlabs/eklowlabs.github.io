@@ -74,7 +74,7 @@
             <h2 id="源码编译"><a class="markdown-anchor" href="#源码编译">#</a> 源码编译</h2>
             <p>完成了准备工作, 接下来开始编译DFX</p>
             <p>进入到clone后的DataFlow-X主目录下</p>
-            <p>注: 首次编译一般耗时较长, 如果想跳过一些java-docs代码编译, 可编辑主目录下***build.gradle***文件, 注释以下内容即可: </p>
+            <p>注: 首次编译一般耗时较长, 如果想跳过一些java-docs代码编译, 可编辑主目录下 <code>build.gradle</code> 文件, 注释以下内容即可: </p>
             <p>
                 <figure class="highlight java">
                     <table>
@@ -82,15 +82,15 @@
                             <td class="code">
                                 <pre>
                                     <span class="string">
-                                    //  task javadocJar(type: Jar, dependsOn: javadoc) {
-                                    //    classifier = 'javadoc'
-                                    //    from javadoc.destinationDir
-                                    //    //javadoc.failOnError = false
-                                    //  }
-                                      artifacts {
-                                        archives sourcesJar
-                                    //    , javadocJar
-                                      }
+//  task javadocJar(type: Jar, dependsOn: javadoc) {
+//    classifier = 'javadoc'
+//    from javadoc.destinationDir
+//    //javadoc.failOnError = false
+//  }
+  artifacts {
+    archives sourcesJar
+//    , javadocJar
+  }
                                 </span>
                                 </pre>
                             </td>
@@ -125,6 +125,16 @@
             <p>耐心等待编译完成, 即可进行下一步运行</p>
             
             <h2 id="运行应用"><a class="markdown-anchor" href="#运行应用">#</a> 运行应用</h2>
+            <p>请注意, 尽管DFX支持Windows环境下调试和运行, 如果您想更好的使用DFX, 建议在Unix或Linux环境下运行, 以期得到更好的体验, 下面将分别介绍两种运行方式</p>
+            <h3>命令行 运行</h3>
+            <p><strong>解压</strong></p>
+            <p>编译完成后, 解压dfx-dist/build/distributions目录下的dfx-xxx.tgz文件, 并查看dfx-xxx目录</p>
+
+
+            <h3>IntelliJ IDEA 运行</h3>
+
+
+
 
         </article>
 
