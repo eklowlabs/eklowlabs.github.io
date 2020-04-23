@@ -128,9 +128,62 @@
             <p>请注意, 尽管DFX支持Windows环境下调试和运行, 如果您想更好的使用DFX, 建议在Unix或Linux环境下运行, 以期得到更好的体验, 下面将分别介绍两种运行方式</p>
             <h3>命令行 运行</h3>
             <p><strong>解压</strong></p>
-            <p>编译完成后, 解压dfx-dist/build/distributions目录下的dfx-xxx.tgz文件, 并查看dfx-xxx目录</p>
+            <p>编译完成后, 解压dfx-dist/build/distributions目录下的dfx-xxx.tgz文件, 并查看dfx-xxx目录, 注意: 以下操作如果不做特殊说明, 都是在dfx-xxx目录下进行操作</p>
+            <p><strong>修改 dfx.properties 配置文件</strong> 打开etc/dfx/dfx.properties</p>
+            <p>可根据需要自定义配置, 修改完后保存即可
+                <figure class="highlight yaml">
+                    <table>
+                        <tr>
+                            <td class="code">
+                                <pre>
+                                    <span class="string">
+  # server web port
+  web.server.port=8092
+  # metadata path
+  server.metadata.path=./data
+  # job working dir
+  server.jobstore.workpath=./jobs
+  # job runtime mode, yarn or local
+  job.runtime.mode=local
+                                    </span>
+                                </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </figure>
+            </p>
+
+            <p><strong>修改 dfx-env.sh 脚本文件</strong></p>
+            <p>
+                <figure class="highlight shell">
+                    <table>
+                        <tr>
+                            <td class="code">
+                                <pre>
+                                    <span class="string">
+    #!/bin/bash
+  # set your JAVA_HOME
+  #export JAVA_HOME=/opt/sys/parcels/jdk8
+
+  # set your HADOOP_CONF_DIR
+  export HADOOP_CONF_DIR=/sys/hadoop/hadoop/etc/hadoop
+
+  # set your FLINK_HOME
+  export FLINK_HOME=/sys/flink
+
+  # set your SPARK_HOME
+  export SPARK_HOME=/sys/spark
+                                    </span>
+                                </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </figure>
+            </p>
 
 
+
+            
             <h3>IntelliJ IDEA 运行</h3>
 
 
