@@ -1028,7 +1028,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 }
 .highlight .string,
 .highlight .doctag {
-  color: #2d9e2d;
+  color: rgb(0,115,255);
 }
 .highlight .title,
 .highlight .section,
