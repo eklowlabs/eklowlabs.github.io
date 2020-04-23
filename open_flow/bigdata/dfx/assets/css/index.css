@@ -1114,7 +1114,7 @@ a {
 }
 p {
   margin: 0;
-  color: #24292d;
+  color: #24292de0;
 }
 /* big font */
 .ft-b {
@@ -1249,7 +1249,7 @@ p {
 .nav-logo span {
   transform: translate(7px, -19px);
   display: inline-block;
-  color: #24292d;
+  color: #24292de0;
   font-size: 28px;
   font-weight: bold;
   font-style: oblique;
