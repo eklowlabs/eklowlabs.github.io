@@ -61,17 +61,59 @@
             <h3 id="DFX架构"><a class="markdown-anchor" href="#DFX架构">#</a> DFX架构</h3>
             <img src="/open_flow/bigdata/dfx/assets/images/dfx/dfx-architecture.png" style="width: 100%;">
             <p><strong><code>Running Environment</code></strong>:</p>
-            <p>任务运行环境, 目前支持Local和Yarn运行模式, 由 <code>job.runtime.mode</code> 决定</p>
+            <p>任务运行环境, 目前支持 Local 和 Yarn 运行模式, 由 <code>job.runtime.mode</code> 决定</p>
             <p><strong><code>Container</code></strong>:</p>
+            <p>Container是任务提交给运行环境的单元, 分别包含LocalContainer和YarnContainer, 由 <code>job.runtime.mode</code> 决定,
+                LocalContainer 即任务运行在本地, 可以在本地测试使用 (支持Mac & Linux & Windows环境), YarnContainer 即提交到Yarn环境下环境运行,
+                Yarn环境在dfx-env.sh中设置, 由 Container 向发布任务到运行环境、停止任务运行、获取任务运行状态等, Container 由 JobManager 创建, 并将其加入运行队列中进行调度
+            </p>
             <p><strong><code>JobEngine</code></strong>:</p>
-            <p><strong><code>Flink Engine</code></strong>:</p>
-            <p><strong><code>Spark Engine</code></strong>:</p>
+            <p>JobEngine 会对用户提交的SQL进行构建和编译, 倘若失败也即意味着用户的SQL语法不符合Loris某些规范, 只有 JobEngine 顺利执行后的任务, 才会创建Container并进入任务队列调度
+            <p>JobEngine 主要包含功能</p>
+            <ul>
+                <li>1: 将用户提交的任务转换解析（Flow->Job->Graph）</li>
+                <li>2: 使用具体的Engine对转换后的Job进行编译, JobEngine 主要有 Flink 1.7.2 和 Spark 2.X, 每种引擎又包含多个执行引擎, 具体类型如下
+                    (界面中可以选择相应的引擎)
+                    <ul>
+                        <li><strong><code>Flink Engine</code></strong>:
+                            <ul>
+                                <li>FlinkMainClassEngine: Main Class Engine, 上传带有main方法的jar包, 目前界面不可选;</li>
+                                <li>FlinkStreamEtlEngine: 任务流实现, 目前界面不支持;</li>
+                                <li>FlinkStreamSqlEngine: SQL Engine, 用户通过页面选择并编写SQL提交;</li>
+                            </ul>
+                        </li>
+                        <li><strong><code>Spark Engine</code></strong>:
+                            <ul>
+                                <li>StreamEtlEngine: Spark Streaming 任务流实现, 目前界面不支持;</li>
+                                <li>Stream2EtlEngine: Structured Streaming 任务流实现, 目前界面不支持;</li>
+                                <li>SparkSubmitEngine: Spark Main Class Engine, 上传带有main方法的jar包, 目前界面不可选;</li>
+                                <li>SparkStreamingSQLEngine：Spark Streaming SQL Engine，用户通过页面选择并编写SQL提交;</li>
+                                <li>StructuredStreamingSQLEngine: Structured Streaming SQL Engine, 用户通过页面选择并编写SQL提交;
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            </p>
+            
             <p><strong><code>JobManager</code></strong>:</p>
+            <p>
+                JobManager 是用户和底层的中转站, 用户通过 Portal 编写任务提交至 JobManager, JobManager 负责任务的提交、启动、停止以及监控等
+            <p>JobManager 主要包含功能</p>
+            <ul>
+                <li>JobStore: 负责任务配置、DDL以及状态信息等的持久化;</li>
+                <li>JobSchedulePool: 任务调度池, 需要启动的任务, 首先进入调度池等待调度;</li>
+                <li>Containers: 即每个任务的Container, 进入调度池的即是Container;</li>
+                <li>JobEngineManger: 负责编译Engine;</li>
+                <li>JobMonitor: 监控任务运行状态, 具有任务失败重启机制;</li>
+            </ul>
+            </p>
+
             <p><strong><code>Portal</code></strong>:</p>
-
-
-
+            <p>用户操作界面, 开发者可通过页面创建任务和维护任务</p>
         </article>
+
         <aside id="mobileAside" class="toc">
             <div class="mobile-menu">
                 <ul>
