@@ -61,14 +61,13 @@
             <h3 id="DDFX Architecture"><a class="markdown-anchor" href="#DFX Architecture">#</a> DFX Architecture</h3>
             <img src="/open_flow/bigdata/dfx/assets/images/dfx/dfx-architecture.png" style="width: 100%;">
             <p><strong><code>Running Environment</code></strong>:</p>
-            <p>Task running environment, currently supports Local and Yarn running modes, determined by <code>
-                job.runtime.mode</code>;</p>
+            <p>Task running environment, currently supports Local and Yarn running modes, determined by <code>job.runtime.mode</code>;</p>
             <p><strong><code>Container</code></strong>:</p>
             <p>Container is the unit that the task submits to the runtime environment, which includes LocalContainer and
-                YarnContainer, which is determined by <code> job.runtime.mode</code><br>
+                YarnContainer, which is determined by <code>job.runtime.mode</code><br>
                 LocalContainer means that the task runs locally and can be tested locally (supports Mac & Linux &
                 Windows environment); <br>YarnContainer is submitted to the Yarn environment to run, the Yarn
-                environment is set in <code> dfx-env.sh </code>, the Container publishes the task to the running
+                environment is set in <code>dfx-env.sh</code>, the Container publishes the task to the running
                 environment, stops the task, and obtains the task running status.The Container is managed by JobManager
                 Create and add it to the running queue for scheduling;
             </p>
