@@ -58,7 +58,88 @@
     <div class="page-main">
         <article class="markdown-body">
             <h1>Framework Development</h1>
-            <p>No Data</p>
+            <h3 id="DDFX Architecture"><a class="markdown-anchor" href="#DFX Architecture">#</a> DFX Architecture</h3>
+            <img src="/open_flow/bigdata/dfx/assets/images/dfx/dfx-architecture.png" style="width: 100%;">
+            <p><strong><code>Running Environment</code></strong>:</p>
+            <p>Task running environment, currently supports Local and Yarn running modes, determined by <code>
+                job.runtime.mode</code>;</p>
+            <p><strong><code>Container</code></strong>:</p>
+            <p>Container is the unit that the task submits to the runtime environment, which includes LocalContainer and
+                YarnContainer, which is determined by <code> job.runtime.mode</code><br>
+                LocalContainer means that the task runs locally and can be tested locally (supports Mac & Linux &
+                Windows environment); <br>YarnContainer is submitted to the Yarn environment to run, the Yarn
+                environment is set in <code> dfx-env.sh </code>, the Container publishes the task to the running
+                environment, stops the task, and obtains the task running status.The Container is managed by JobManager
+                Create and add it to the running queue for scheduling;
+            </p>
+            <p><strong><code>JobEngine</code></strong>:</p>
+            <p>JobEngine will build and compile the SQL submitted by the user.If it fails, it means that the user's SQL
+                syntax does not meet certain Loris specifications. Only after the JobEngine is successfully executed,
+                will the Container be created and enter the task queue scheduling;
+            <p>JobEngine mainly includes functions:</p>
+            <ul>
+                <li>1: Parse the task submitted by the user into (Flow-> Job-> Graph)</li>
+                <li>2: Use specific Engine to compile the converted Job.JobEngine mainly includes Flink 1.7.2 and Spark
+                    2.X, each engine contains multiple execution engines, the specific types are as follows (the
+                    corresponding engine can be selected in the interface):
+                    <ul>
+                        <li><strong>Flink Engine</strong>:
+                            <ul>
+                                <li>FlinkMainClassEngine: Main Class Engine, upload the jar package with the main
+                                    method, the current interface is not optional;
+                                </li>
+                                <li>FlinkStreamEtlEngine: Task flow implementation, currently the interface does not
+                                    support;
+                                </li>
+                                <li>FlinkStreamSqlEngine: SQL Engine, users select and write SQL submission through the
+                                    page;
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>Spark Engine</strong>:
+                            <ul>
+                                <li>StreamEtlEngine: Spark Streaming task stream implementation, currently the interface
+                                    does not support;
+                                </li>
+                                <li>Stream2EtlEngine: Structured Streaming task stream implementation, currently the
+                                    interface does not support;
+                                </li>
+                                <li>SparkSubmitEngine: Spark Main Class Engine, upload the jar package with the main
+                                    method, the current interface is not optional;
+                                </li>
+                                <li>SparkStreamingSQLEngine: Spark Streaming SQL Engine, users select and write SQL
+                                    submission through the page;
+                                </li>
+                                <li>StructuredStreamingSQLEngine: Structured Streaming SQL Engine, users select and
+                                    write SQL submissions through the page;
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            </p>
+
+            <p><strong><code>JobManager</code></strong>:</p>
+            <p>
+                JobManager is a transfer station for users and the bottom layer.Users write tasks to submit to
+                JobManager through Portal;
+            <p>JobManager mainly contains functions: </p>
+            <ul>
+                <li>JobStore: Responsible for task configuration, DDL and status information persistence;</li>
+                <li>JobSchedulePool: Task scheduling pool, tasks that need to be started, first enter the scheduling
+                    pool and wait for scheduling;
+                </li>
+                <li>Containers: That is, the Container of each task, and it is the Container that enters the scheduling
+                    pool;
+                </li>
+                <li>JobEngineManger: Responsible for compiling Engine;</li>
+                <li>JobMonitor: Monitoring task running status, with task failure restart mechanism;</li>
+            </ul>
+            </p>
+
+            <p><strong><code>Portal</code></strong>:</p>
+            <p>User operation interface, developers can create tasks and maintain tasks through the page;</p>
         </article>
 
         <aside id="mobileAside" class="toc">
