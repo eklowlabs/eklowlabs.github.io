@@ -2,7 +2,7 @@
 
 <br>
 
-[![文档更新时间](https://img.shields.io/badge/更新时间-2020%2F04%2F20-darkorchid.svg?style=for-the-badge&logo=codacy&cacheSeconds=3600)]()
+[![文档更新时间](https://img.shields.io/badge/更新时间-2020%2F04%2F24-darkorchid.svg?style=for-the-badge&logo=codacy&cacheSeconds=3600)]()
 [![文档语言-简体中文](https://img.shields.io/badge/文档语言-简体中文-coral.svg?style=for-the-badge&logo=microsoft-word&cacheSeconds=3600)](./README_CN.md)
 [![文档语言-英文](https://img.shields.io/badge/文档语言-英文-mediumpurple.svg?style=for-the-badge&logo=microsoft-word&cacheSeconds=3600)](./README.md)
 [![开放源码](https://img.shields.io/badge/开放源码-%E2%9D%A4-brightgreen.svg?style=for-the-badge&logo=conekta&cacheSeconds=3600)]()
@@ -18,7 +18,7 @@
 ------------
 
 <div align="center">
-  <img src="resource/group_sign/eklowlabs_organization_sign.svg" alt="eklowlabs_organization_sign" title="eklowlabs_organization_sign" style="width:1280px;height:450px">
+  <img src="resource/group_sign/eklowlabs_organization_sign_(rgb).svg" alt="eklowlabs_organization_sign" title="eklowlabs_organization_sign" style="width:1280px;height:450px">
 </div>
 <br>
 
