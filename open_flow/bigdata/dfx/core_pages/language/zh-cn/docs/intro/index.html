@@ -13,7 +13,7 @@
 <body>
 <div class="nav">
     <header>
-        <a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn" class="nav-logo" alt="nodeui">
+        <a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn" class="nav-logo" alt="DFX">
             <img src="/open_flow/bigdata/dfx/assets/images/dfx.svg"><span>DFX</span>
         </a>
         <ul class="nav-item">
@@ -24,7 +24,8 @@
             </li>
             <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/intro" alt="使用文档" class="">使用文档</a></li>
             <li><a href="https://github.com/eklowlabs/DataFlow-X/releases" alt="发布日志" class="">发布日志</a></li>
-            <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/page/user.html" alt="使用案例" class="">使用案例</a></li>
+            <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/page/user.html" alt="使用案例" class="">使用案例</a>
+            </li>
 
             <li class="translations">
                 <a class="nav-link">语言</a>
@@ -55,13 +56,16 @@
 <div id="container">
     <div class="page-main">
         <article class="markdown-body">
-            <img src="/open_flow/bigdata/dfx/assets/images/dfx_logo_source.svg" alt="DFX-Sign" title="DFX-Sign" style="width: 95%;">
+            <img src="/open_flow/bigdata/dfx/assets/images/dfx_logo_source.svg" alt="DFX" title="DFX"
+                 style="width: 95%;">
             <h1>DataFlow-X 是什么 ?</h1>
             <p><strong>DataFlow-X 是用于实时流计算的平台, 核心是通过工作流描述构建分布式流计算应用程序</strong>, DFX是一套完整的解决方案, 主要包括: </p>
             <ul>
                 <li>开发工具: <code>webUI</code>, 定义streamSql或streamETL任务</li>
-                <li>运行时: 基于 <code>Apache Spark2.x</code> 及 <code>Apache Flink1.5+</code>, 依赖 <code>Apache Hadoop</code> 和 <code>Yarn</code></li>
-                <li>Pipline插件扩展: <code>java8</code>, 按需实现 <code>Source</code> => <code>Transform</code> => <code>Sink</code></li>
+                <li>运行时: 基于 <code>Apache Spark2.x</code> 及 <code>Apache Flink1.5+</code>, 依赖 <code>Apache Hadoop</code>
+                    和 <code>Yarn</code></li>
+                <li>Pipline插件扩展: <code>java8</code>, 按需实现 <code>Source</code> => <code>Transform</code> =>
+                    <code>Sink</code></li>
                 <li>基础运维: 在 <code>DFX webUI</code> 完成任务创建后一键部署上线, 无需人工部署, 整个分布式程序由DFX进行管理</li>
                 <li>运行分析: 在 <code>DFX webUI</code> 上面即可看到任务运行情况, 不再需要打隧道查看Yarn任务</li>
             </ul>
@@ -102,19 +106,25 @@
                 <dt>新手指南</dt>
                 <dd>
                     <ul>
-                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/intro/index.html" class="cur">DFX是什么</a></li>
-                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/intro/quick_start.html" class="">快速入门</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/intro/index.html"
+                               class="cur">DFX是什么</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/intro/quick_start.html"
+                               class="">快速入门</a></li>
                         <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/intro/etl.html" class="">ETL任务</a>
                         </li>
-                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/intro/batch-join.html" class="">维表Join</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/intro/batch-join.html"
+                               class="">维表Join</a></li>
                     </ul>
                 </dd>
                 <dt>基础功能</dt>
                 <dd>
                     <ul>
-                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/basics/setup.html" class="">安装</a></li>
-                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/basics/structure.html" class="">目录结构</a></li>
-                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/basics/deployment.html" class="">应用部署</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/basics/setup.html" class="">安装</a>
+                        </li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/basics/structure.html"
+                               class="">目录结构</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/basics/deployment.html"
+                               class="">应用部署</a></li>
                         <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/basics/online.html" class="">上线和路由</a>
                         </li>
                     </ul>
@@ -122,22 +132,27 @@
                 <dt>进阶功能</dt>
                 <dd>
                     <ul>
-                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/advanced/framework.html" class="">框架开发</a></li>
-                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/advanced/plugin_manager.html" class="">插件管理</a></li>
-                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/advanced/plugin_api.html" class="">pipe插件接口定义</a>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/advanced/framework.html"
+                               class="">框架开发</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/advanced/plugin_manager.html"
+                               class="">插件管理</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/advanced/plugin_api.html"
+                               class="">pipe插件接口定义</a>
                         </li>
                     </ul>
                 </dd>
                 <dt>常见问题</dt>
                 <dd>
                     <ul>
-                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/faq/deploy.html" class="">部署问题</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/faq/deploy.html" class="">部署问题</a>
+                        </li>
                     </ul>
                 </dd>
                 <dt>其它</dt>
                 <dd>
                     <ul>
-                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/basics/service.html" class="">服务</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/zh-cn/docs/basics/service.html"
+                               class="">服务</a></li>
                     </ul>
                 </dd>
             </dl>

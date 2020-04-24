@@ -13,7 +13,7 @@
 <body>
 <div class="nav">
     <header>
-        <a href="/open_flow/bigdata/dfx/core_pages/language/en" class="nav-logo" alt="nodeui">
+        <a href="/open_flow/bigdata/dfx/core_pages/language/en" class="nav-logo" alt="DFX">
             <img src="/open_flow/bigdata/dfx/assets/images/dfx.svg"><span>DFX</span>
         </a>
         <ul class="nav-item">
@@ -56,20 +56,31 @@
 <div id="container">
     <div class="page-main">
         <article class="markdown-body">
-            <img src="/open_flow/bigdata/dfx/assets/images/dfx_logo_source.svg" alt="DFX-Sign" title="DFX-Sign" style="width: 95%;">
+            <img src="/open_flow/bigdata/dfx/assets/images/dfx_logo_source.svg" alt="DFX" title="DFX"
+                 style="width: 95%;">
             <h1>What is DataFlow-X ?</h1>
-            <p><strong>DataFlow-X is a platform for real-time flow computing, the core is to build distributed flow computing applications through workflow description</strong>, DFX is a complete solution, mainly including: </p>
+            <p><strong>DataFlow-X is a platform for real-time flow computing, the core is to build distributed flow
+                computing applications through workflow description</strong>, DFX is a complete solution, mainly
+                including: </p>
             <ul>
                 <li>Development Tools: <code>webUI</code>, Define stream Sql or stream ETL task</li>
-                <li>RunTime: based on <code>Apache Spark 2.x</code> and <code>Apache Flink 1.5+</code> , rely <code>Apache Hadoop</code> and <code>Yarn</code></li>
-                <li>Pipline Plugin Extension: <code>java8</code>, On demand <code>Source</code> => <code>Transform</code> => <code>Sink</code></li>
-                <li>Basic Operation And Maintenance: in <code>DFX webUI</code> One-click deployment and online after completing task creation, No manual deployment, The entire distributed program is managed by DFX</li>
-                <li>Run Analysis: You can see the task running status on the <code>DFX webUI</code>, no longer need to tunnel to view Yarn tasks</li>
+                <li>RunTime: based on <code>Apache Spark 2.x</code> and <code>Apache Flink 1.5+</code> , rely <code>Apache
+                    Hadoop</code> and <code>Yarn</code></li>
+                <li>Pipline Plugin Extension: <code>java8</code>, On demand <code>Source</code> =>
+                    <code>Transform</code> => <code>Sink</code></li>
+                <li>Basic Operation And Maintenance: in <code>DFX webUI</code> One-click deployment and online after
+                    completing task creation, No manual deployment, The entire distributed program is managed by DFX
+                </li>
+                <li>Run Analysis: You can see the task running status on the <code>DFX webUI</code>, no longer need to
+                    tunnel to view Yarn tasks
+                </li>
             </ul>
             <h2 id="Design Principles"><a class="markdown-anchor" href="#Design Principles">#</a> Design Principles</h2>
             <ul>
                 <li>Separation using plug-in system <strong>Configuration and implementation</strong></li>
-                <li><strong>Convention is better than configuration</strong>, according to a unified convention for application development, from development tools to directory structure.</li>
+                <li><strong>Convention is better than configuration</strong>, according to a unified convention for
+                    application development, from development tools to directory structure.
+                </li>
             </ul>
             <h2 id="Characteristic"><a class="markdown-anchor" href="#Characteristic">#</a> Characteristic</h2>
             <ul>
@@ -78,8 +89,12 @@
                 <li>Easy Deployment: Automatic restart mechanism, one-click online to Yarn</li>
                 <li>Simple Operation And Maintenance: Log monitoring</li>
             </ul>
-            <h2 id="What kind of scene is suitable for DFX"><a class="markdown-anchor" href="#What kind of scene is suitable for DFX">#</a> What kind of scene is suitable for DFX</h2>
-            <p>The current DFX positioning is mainly <code>Real-time ETL data processing capability</code> and <code>Real-time streaming computing</code>, Based on these two capabilities, DFX has its own specific application scenarios, mainly as follows: </p>
+            <h2 id="What kind of scene is suitable for DFX"><a class="markdown-anchor"
+                                                               href="#What kind of scene is suitable for DFX">#</a> What
+                kind of scene is suitable for DFX</h2>
+            <p>The current DFX positioning is mainly <code>Real-time ETL data processing capability</code> and <code>Real-time
+                streaming computing</code>, Based on these two capabilities, DFX has its own specific application
+                scenarios, mainly as follows: </p>
             <ul>
                 <li>Fast experimental flow calculation</li>
                 <li>Manage stream computing tasks</li>
@@ -104,34 +119,46 @@
                 <dt>Guide</dt>
                 <dd>
                     <ul>
-                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/intro/index.html" class="cur">What is DFX</a></li>
-                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/intro/quick_start.html" class="">Quick Start</a></li>
-                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/intro/etl.html" class="">ETL Job</a></li>
-                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/intro/batch-join.html" class="">Stream Join Batch</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/intro/index.html" class="cur">What
+                            is DFX</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/intro/quick_start.html"
+                               class="">Quick Start</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/intro/etl.html" class="">ETL
+                            Job</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/intro/batch-join.html" class="">Stream
+                            Join Batch</a></li>
                     </ul>
                 </dd>
                 <dt>Basics</dt>
                 <dd>
                     <ul>
-                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/basics/setup.html" class="">Setup</a></li>
-                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/basics/structure.html" class="">Directory Structure</a></li>
-                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/basics/deployment.html" class="">Application Deployment</a></li>
-                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/basics/online.html" class="">Job Online</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/basics/setup.html" class="">Setup</a>
+                        </li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/basics/structure.html" class="">Directory
+                            Structure</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/basics/deployment.html"
+                               class="">Application Deployment</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/basics/online.html" class="">Job
+                            Online</a></li>
                     </ul>
                 </dd>
                 <dt>Advanced</dt>
                 <dd>
                     <ul>
-                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/advanced/framework.html" class="">Framework Development</a></li>
-                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/advanced/plugin_manager.html" class="">Plugin Manager</a>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/advanced/framework.html"
+                               class="">Framework Development</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/advanced/plugin_manager.html"
+                               class="">Plugin Manager</a>
                         </li>
-                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/advanced/plugin_api.html" class="">Connector Api</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/advanced/plugin_api.html"
+                               class="">Connector Api</a></li>
                     </ul>
                 </dd>
                 <dt>FAQ</dt>
                 <dd>
                     <ul>
-                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/faq/deploy.html" class="">Deploy</a></li>
+                        <li><a href="/open_flow/bigdata/dfx/core_pages/language/en/docs/faq/deploy.html"
+                               class="">Deploy</a></li>
                     </ul>
                 </dd>
                 <dt>Other</dt>
