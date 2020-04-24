@@ -58,6 +58,195 @@
     <div class="page-main">
         <article class="markdown-body">
             <h1>Application Deployment</h1>
+            <h2 id="Early Preparation of Dev Environment"><a class="markdown-anchor"
+                                                             href="#Early Preparation of Dev Environment">#</a> Early
+                Preparation of Dev Environment</h2>
+            <ul>
+                <li>JDK: First please make sure the JDK version is above 1.8, check the Java version <code>java
+                    -version</code>, if it is not installed, please download and install jdk_1.8 +
+                </li>
+                <li>clone: DFX is based on the Apache Flink version and is currently compatible with Apache Flink 1.7.2
+                    and Apache Flink 1.9
+                </li>
+                <li>Flink: Please download Apache Flink 1.7.2 with Scala 2.11 or Apache Flink 1.9 with Scala 2.12,
+                    depending on your clone's DFX version<br>
+                    <strong>Note: Apache Flink and Apache Hadoop / Apache Spark only need to download the package to
+                        decompress. If you are using local mode, you do not need to build or start any Hadoop / Spark or
+                        Flink environment. If you are using Yarn mode, then Need Yarn cluster</strong>
+                </li>
+                <li>Spark: Please download Apache Spark 2.4.x + with-hadoop-xxx (the later version is determined by the
+                    version of hadoop you download)
+                </li>
+                <li>Hadoop: Please download Apache Hadoop 2.6 or later</li>
+            </ul>
+
+            <h2 id="Source Code Compilation"><a class="markdown-anchor" href="#Source Code Compilation">#</a> Source
+                Code Compilation</h2>
+            <p>Completed the preparation work, then began to compile DFX</p>
+            <p>Enter the main directory of Data Flow-X after clone</p>
+            <p>Note: The first compilation generally takes a long time. If you want to skip some java-docs code
+                compilation, you can edit the <code> build.gradle</code> file in the main directory, and just comment
+                the following: </p>
+            <p>
+                <figure class="highlight java">
+                    <table>
+                        <tr>
+                            <td class="code">
+                                <pre>
+                                    <span class="string">
+//  task javadocJar(type: Jar, dependsOn: javadoc) {
+//    classifier = 'javadoc'
+//    from javadoc.destinationDir
+//    //javadoc.failOnError = false
+//  }
+  artifacts {
+    archives sourcesJar
+//    , javadocJar
+  }
+                                </span>
+                                </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </figure>
+            </p>
+            <p>In Mac or Unix or Linux environment, please execute in the root directory of the project</p>
+            <p>
+                <figure class="highlight sql">
+                    <table>
+                        <tr>
+                            <td class="code">
+                                <pre><span class="string">./gradlew clean assemblet</span></pre>
+                            </td>
+                        </tr>
+                    </table>
+                </figure>
+            </p>
+            <p>Please execute under Windows environment</p>
+            <p>
+                <figure class="highlight sql">
+                    <table>
+                        <tr>
+                            <td class="code">
+                                <pre><span class="string">gradlew.bat clean assemble</span></pre>
+                            </td>
+                        </tr>
+                    </table>
+                </figure>
+            </p>
+            <p>Wait patiently for compilation to proceed</p>
+
+            <h2 id="Run Application"><a class="markdown-anchor" href="#Run Application">#</a> Run Application</h2>
+            <p>Please note that although DFX supports debugging and running in the Windows environment, if you want to
+                use DFX better, it is recommended to run in Unix or Linux environment in order to get a better
+                experience, the following will introduce two modes of operation</p>
+            <h3>Command line operation</h3>
+            <p><strong>Unzip</strong></p>
+            <p>After the compilation is complete, unzip the dfx-xxx.tgz file in the dfx-dist / build / distributions
+                directory, and view the dfx-xxx directory. Note: The following operations are performed under the
+                dfx-xxx directory unless special instructions are given.</p>
+            <p><strong>Modify the dfx.properties configuration file</strong> Open etc/dfx /dfx.properties</p>
+            <p>You can customize the configuration according to your needs, save it after modification
+                <figure class="highlight yaml">
+                    <table>
+                        <tr>
+                            <td class="code">
+                                <pre>
+                                    <span class="string">
+  # server web port
+  web.server.port=8092
+  # metadata path
+  server.metadata.path=./data
+  # job working dir
+  server.jobstore.workpath=./jobs
+  # job runtime mode, yarn or local
+  job.runtime.mode=local
+                                    </span>
+                                </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </figure>
+            </p>
+            <p><strong>Modify the dfx-env.sh script file</strong></p>
+            <p>
+                <figure class="highlight shell">
+                    <table>
+                        <tr>
+                            <td class="code">
+                                <pre>
+                                    <span class="string">
+  #!/bin/bash
+  # set your JAVA_HOME
+  #export JAVA_HOME=/opt/sys/parcels/jdk8
+
+  # set your HADOOP_CONF_DIR
+  export HADOOP_CONF_DIR=/sys/hadoop/hadoop/etc/hadoop
+
+  # set your FLINK_HOME
+  export FLINK_HOME=/sys/flink
+
+  # set your SPARK_HOME
+  export SPARK_HOME=/sys/spark
+                                    </span>
+                                </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </figure>
+            </p>
+            <p><strong>Configuration instructions</strong></p>
+            <ul>
+                <li>HADOOP_CONF_DIR: Hadoop Conf full path, if you are using local mode, you only need to copy the
+                    decompressed hadoop / etc / hadoop path, if you are using Yarn mode, this is the directory where the
+                    Yarn cluster hadoop conf configuration file is located<br>
+                    <strong>Note: If for some reason, DFX cannot be deployed on the machine that contains the Yarn
+                        Hadoop configuration, you can also copy the configuration of the hadoop cluster directly to the
+                        machine where the DFX is located, and modify the configuration direction. Visit your
+                        cluster</strong>
+                </li>
+                <li>FLINK_HOME: Apache Flink path, pointing to the Flink root directory</li>
+                <li>SPARK_HOME: Apache Spark path, pointing to the Spark root directory</li>
+            </ul>
+            <p><strong>Run</strong> After modifying the configuration, execute the following command to run</p>
+            <p>
+                <figure class="highlight sql">
+                    <table>
+                        <tr>
+                            <td class="code">
+                                <pre><span class="string">./bin/launcher start</span></pre>
+                            </td>
+                        </tr>
+                    </table>
+                </figure>
+                The log file is: logs / INFO.log
+            </p>
+
+            <h3>IntelliJ IDEA Running</h3>
+            <p><strong>Import project</strong></p>
+            <p>Import DataFlow-X into IntelliJ IDEA, before proceeding to the next step, please make sure some
+                environmental information, such as jdk and java compiler must be version 8 or above</p>
+            <p><strong>Run / Debug Configurations</strong></p>
+            <p>Create a new RunConf of Application and fill in the configuration</p>
+            <p><strong>Related configuration instructions</strong></p>
+            <ul>
+                <li>Main Class: <code>com.eklowlabs.dfx.main.DFXMaster</code></li>
+                <li>VM Options: <code>-Dconfig=etc/dfx/dfx.properties -Dlogging.config=etc/dfx/logback.xml</code></li>
+                <li>Program Arguments: If you modify <code>dfx-env.sh</code> during the command line operation,
+                    configure the environment of Flink, etc., and divide it with ";"
+                </li>
+                <li>Working Directory: Directory to the compiled dfx-dist / build directory, that is, the full path of
+                    the dfx directory / dfx-dist / build after clon
+                </li>
+                <li>Environment Variables: Same as Program Arguments</li>
+                <li>Use Classpath of Module: <code>dfx-main</code></li>
+                <li>JRE: 1.8</li>
+            </ul>
+            <p><strong>Run</strong></p>
+            <p>After the application configuration is complete, you can run</p>
+            <p>At this point, the deployment is successfully completed, if you have any questions during deployment or
+                use, please submit <a href="https://github.com/eklowlabs/DataFlow-X/issues">issues</a>Or by <a
+                        href="mailto:eklowlabs@outlook.com">contact us</a>, Hope DFX can make you enjoyable work!</p>
         </article>
 
         <aside id="mobileAside" class="toc">

@@ -98,7 +98,7 @@
                     </table>
                 </figure>
             </p>
-            <p>在Mac 或 Unix 或 Linux环境下在项目根目录下请执行</p>
+            <p>Mac 或 Unix 或 Linux环境下, 请在项目根目录下执行</p>
             <p>
                 <figure class="highlight sql">
                     <table>
@@ -123,13 +123,14 @@
                 </figure>
             </p>
             <p>耐心等待编译完成, 即可进行下一步运行</p>
-            
+
             <h2 id="运行应用"><a class="markdown-anchor" href="#运行应用">#</a> 运行应用</h2>
-            <p>请注意, 尽管DFX支持Windows环境下调试和运行, 如果您想更好的使用DFX, 建议在Unix或Linux环境下运行, 以期得到更好的体验, 下面将分别介绍两种运行方式</p>
+            <p>请注意, 尽管DFX支持Windows环境下调试和运行, 如果你想更好的使用DFX, 建议在Unix或Linux环境下运行, 以期得到更好的体验, 下面将分别介绍两种运行方式</p>
             <h3>命令行 运行</h3>
             <p><strong>解压</strong></p>
-            <p>编译完成后, 解压dfx-dist/build/distributions目录下的dfx-xxx.tgz文件, 并查看dfx-xxx目录, 注意: 以下操作如果不做特殊说明, 都是在dfx-xxx目录下进行操作</p>
-            <p><strong>修改 dfx.properties 配置文件</strong> 打开etc/dfx/dfx.properties</p>
+            <p>编译完成后, 解压dfx-dist/build/distributions目录下的dfx-xxx.tgz文件, 并查看dfx-xxx目录, 注意: 以下操作如果不做特殊说明,
+                都是在dfx-xxx目录下进行操作</p>
+            <p><strong>修改 dfx.properties 配置文件</strong> 打开 etc/dfx/dfx.properties</p>
             <p>可根据需要自定义配置, 修改完后保存即可
                 <figure class="highlight yaml">
                     <table>
@@ -181,8 +182,10 @@
             </p>
             <p><strong>配置说明</strong></p>
             <ul>
-                <li>HADOOP_CONF_DIR: Hadoop Conf全路径, 如果使用的是local模式, 只需要将解压后的hadoop/etc/hadoop路径拷贝即可, 如果使用的是Yarn模式, 则这里是Yarn集群 hadoop conf 配置文件所在目录
-                    <strong>注意: 如果因为某些原因, DFX无法部署在包含Yarn Hadoop配置的机器, 也可将hadoop集群的配置直接拷贝至DFX所在机器上, 并修改配置指向, 这种情况下请确保DFX所在机器可以成功访问您的集群</strong>
+                <li>HADOOP_CONF_DIR: Hadoop Conf 全路径, 如果使用的是local模式, 只需要将解压后的hadoop/etc/hadoop路径拷贝即可, 如果使用的是Yarn模式,
+                    则这里是Yarn集群 hadoop conf 配置文件所在目录<br>
+                    <strong>注意: 如果因为某些原因, DFX无法部署在包含Yarn Hadoop配置的机器, 也可将hadoop集群的配置直接拷贝至DFX所在机器上, 并修改配置指向,
+                        这种情况下请确保DFX所在机器可以成功访问您的集群</strong>
                 </li>
                 <li>FLINK_HOME: Apache Flink路径, 指向Flink根目录</li>
                 <li>SPARK_HOME: Apache Spark路径, 指向Spark根目录</li>
@@ -197,7 +200,8 @@
                             </td>
                         </tr>
                     </table>
-                </figure>日志文件为: logs/INFO.log
+                </figure>
+                日志文件为: logs/INFO.log
             </p>
 
             <h3>IntelliJ IDEA 运行</h3>
@@ -207,17 +211,18 @@
             <p>新建Application的RunConf, 进行配置的填写</p>
             <p><strong>相关配置说明</strong></p>
             <ul>
-                <li>Main Class: <code>ideal.sylph.main.DFXMaster</code></li>
-                <li>VM Options: <code>-Dconfig=etc/DataFlow-X/dfx.properties -Dlogging.config=etc/DataFlow-X/logback.xml</code></li>
+                <li>Main Class: <code>com.eklowlabs.dfx.main.DFXMaster</code></li>
+                <li>VM Options: <code>-Dconfig=etc/dfx/dfx.properties -Dlogging.config=etc/dfx/logback.xml</code></li>
                 <li>Program Arguments: 如命令行运行中修改 <code>dfx-env.sh</code>, 将Flink等的环境配置进来, 以";"分割</li>
-                <li>Working Directory: 目录到编译后的 dfx-dist/build目录下, 即clone后的dfx目录/dfx-dist/build全路径</li>
+                <li>Working Directory: 目录到编译后的 dfx-dist/build目录下, 即clone后的dfx目录/dfx-dist/build 全路径</li>
                 <li>Environment Variables: 与Program Arguments相同</li>
                 <li>Use Classpath of Module: <code>dfx-main</code></li>
                 <li>JRE: 1.8</li>
             </ul>
             <p><strong>运行</strong></p>
             <p>application配置完成后即可运行</p>
-            <p>至此, 部署顺利完成, 如果你在部署或者使用过程中有任何问题, 欢迎提交<a href="https://github.com/eklowlabs/DataFlow-X/issues">issues</a>或者通过<a href="mailto:eklowlabs@outlook.com">联系我们</a>, 希望DFX可以让你进行愉快工作!</p>
+            <p>至此, 部署顺利完成, 如果你在部署或者使用过程中有任何问题, 欢迎提交<a href="https://github.com/eklowlabs/DataFlow-X/issues">issues</a>或者通过<a
+                    href="mailto:eklowlabs@outlook.com">联系我们</a>, 希望DFX可以让你进行愉快工作!</p>
         </article>
 
         <aside id="mobileAside" class="toc">
