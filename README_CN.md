@@ -22,7 +22,7 @@
 </div>
 <br>
 
-# Eklow Labs 联合 ApacheCN 正式发起 "领域探索计划"
+# Eklow Labs 联合 ApacheCN 将陆续预发布 试运行 领域探索 "掘金计划"
 
 ## 1. 引言
 
